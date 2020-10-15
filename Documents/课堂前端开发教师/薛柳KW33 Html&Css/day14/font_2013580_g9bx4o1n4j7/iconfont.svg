@@ -1,0 +1,29 @@
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<!--
+2013-9-30: Created.
+-->
+<svg>
+<metadata>
+Created by iconfont
+</metadata>
+<defs>
+
+<font id="iconfont" horiz-adv-x="1024" >
+  <font-face
+    font-family="iconfont"
+    font-weight="500"
+    font-stretch="normal"
+    units-per-em="1024"
+    ascent="896"
+    descent="-128"
+  />
+    <missing-glyph />
+    
+    <glyph glyph-name="chatou" unicode="&#60535;" d="M942.688 212.704h-82.784c-108.704 0-168.608-58.816-168.608-165.6 0-40.608-33.024-73.632-73.664-73.632S544 6.528 544 47.136V186.24c169.44 20.512 301.28 164.992 301.28 339.904V632H864a32 32 0 1 1 0 64h-121.568V800a32 32 0 1 1-64 0v-104H326.656V800a32 32 0 0 1-64 0v-104H160a32 32 0 0 1 0-64v-105.856c0-181.28 141.632-329.76 320-341.504v-137.536c0-75.872 61.76-137.632 137.664-137.632s137.664 61.76 137.664 137.632c0 71.232 31.296 101.6 104.608 101.6h82.784a32 32 0 1 1-0.032 64zM224 526.144V632h557.28v-105.856c0-153.632-124.992-278.656-278.656-278.656S224 372.512 224 526.144z"  horiz-adv-x="1024" />
+
+    
+
+
+  </font>
+</defs></svg>

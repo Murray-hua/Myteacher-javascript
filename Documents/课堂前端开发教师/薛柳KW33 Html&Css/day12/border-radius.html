@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../xl.css">
+    <style>
+        ul{
+            position: relative;
+            width: 500px;
+            height: 500px;
+            margin: 30px auto;
+        }
+        li{
+            width: 200px;
+            height: 200px;
+            border: 1px solid red;
+            position: absolute;
+        }
+        li:first-of-type{
+            transform: rotate(30deg);
+            border-radius: 20% 50% 40% 20%/ 30% 20% 60% 10%;
+            animation: xuanzhuan 7s infinite alternate;
+        }
+        li:nth-of-type(2){
+            transform: rotate(20deg);
+            border-radius: 30% 20% 30% 20%/ 30% 40% 60% 30%;
+            animation: xuanzhuan 10s infinite alternate;
+        }
+        li:nth-of-type(3){
+            border-radius: 50% 10% 40% 20%/ 30% 70% 60% 80%;
+            animation: xuanzhuan2 5s infinite alternate;
+        }
+        @keyframes xuanzhuan {
+            0%{
+                transform: rotate(30deg);
+            }
+            100%{
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes xuanzhuan2 {
+            0%{
+                transform: rotate(360deg);
+            }
+            100%{
+                transform: rotate(30deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <ul>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+
+</body>
+</html>

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        ul li{
+            width: 230px;
+            height: 32px;
+            /* border: 1px solid rebeccapurple; */
+            padding-left: 15px;
+            box-sizing: border-box;
+        }
+        ul li span{
+            width: 35px;
+            height: 32px;
+            /* border: 1px solid red; */
+            display: block;
+            text-align: center;
+            line-height: 32px;
+            float: left;
+        }
+        ul li p{
+            width: 170px;
+            float: left;
+            text-overflow: ellipsis;
+            overflow: hidden;
+            white-space: nowrap;
+            line-height: 32px;
+        }
+        ul li div{
+            width: 84px;
+            height: 21px;
+            border: 1px solid red;
+            float: left;
+            display: none;
+            margin-top: 6px;
+            box-sizing: border-box;
+        }
+        ul li:hover div{
+            display: block;
+        }
+        ul li:hover p{
+            width: 96px;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <span>1</span>
+            <p>Savage Love (Laxed - Siren Beat)</p>
+            <div></div>
+        </li>
+        <li>
+            <span>2</span>
+            <p>Savage Love (Laxed - Siren Beat)</p>
+            <div></div>
+        </li>
+        <li>
+            <span>1</span>
+            <p>Savage Love (Laxed - Siren Beat)</p>
+            <div></div>
+        </li>
+        <li>
+            <span>2</span>
+            <p>Savage Love (Laxed - Siren Beat)</p>
+            <div>
+                <div class="box1"></div>
+                <div class="box2"></div>
+                <div class="box3"></div>
+            </div>
+        </li>
+      
+    </ul>
+</body>
+</html>

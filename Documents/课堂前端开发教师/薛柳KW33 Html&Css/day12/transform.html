@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div.fa{/* 交集选择器 */
+            
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            border: 10px solid;
+            position: relative;
+            transition: transform 2000ms ease 2s;
+            /* 
+                需要有过渡效果的css属性值  必须
+                完成过渡需要的时间 必须
+                过渡的运行曲线
+                过渡延迟开始的时间
+            */
+            /* border-color: red yellow blue green; */
+        }
+        div.fa:hover{/* 交集选择器 */
+            /* transform: rotate(30deg); */
+            /* transform: rotate(-30deg); */
+            /* transform: scale(0.5); */
+            /* transform: scale(-0.5); */
+            /* transform: skew(30deg,15deg); */
+            /* transform: skewX(30deg) skewY(30deg); */
+            /* transform: skewY(30deg); */
+            /* transform: translate(0,100px); */
+            /* transform: translateX(200px); */
+            /* transform: translateY(200px); */
+            /* transform: rotate(30deg) translate(200px); */
+            /* 多种变形的结合写法 */
+            transform: rotate(-360deg);
+        }
+        /* 
+            flex子盒子居中
+            父盒子设置 flex布局
+             align-items: center;
+            justify-content: center;
+        */
+        div.box{
+            width: 50px;
+            height: 50px;
+            background-color: #000;
+            position: absolute;
+            left: 50%;
+            /* 50%相对于父元素的百分比 */
+            top: 50%;
+            /* 50%相对于父元素的百分比 */
+            transform: translate(-50%,-50%);
+            /* -50% 相对于子盒子的百分比 */
+
+        } 
+    </style>
+</head>
+<body>
+    <!-- 变形 -->
+    <div class="fa">
+        <div class="box"></div>
+    </div>
+</body>
+</html>

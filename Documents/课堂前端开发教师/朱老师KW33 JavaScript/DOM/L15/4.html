@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <img src="./img/1.jpg" 
+    id="banner">
+    <script>
+        let imgs = [
+            './img/1.jpg',
+            'http://p1.music.126.net/Z1ScRG2BQkPCT7mUz2zrGA==/109951165322746243.jpg?imageView&quality=89',
+            'http://p1.music.126.net/-nvT2M33VFx2BFYXX2cpTg==/109951165322728977.jpg?imageView&quality=89',
+            'http://p1.music.126.net/y1Vy5_1BSnwmIfmMGSISzg==/109951165322718980.jpg?imageView&quality=89'
+        ]
+
+        let banner = document.querySelector('#banner')
+        let i = 0
+        setInterval(() => {
+            i++
+            if (i === 4) i = 0
+            banner.src = imgs[i]
+        }, 1000);
+
+    </script>
+
+
+</body>
+
+</html>

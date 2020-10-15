@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../simba.css">
+    <style>
+        .item {
+            width: 100vw;
+            height: 100vh;
+        }
+
+        body {
+            width: 100vw;
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        .container {
+            transform: translateY(0vh);
+            transition: 1s;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item" style="background: rgb(218, 91, 218);"></div>
+        <div class="item" style="background: rgb(91, 210, 218);"></div>
+        <div class="item" style="background: rgb(91, 121, 218);"></div>
+        <div class="item" style="background: rgb(211, 184, 63);"></div>
+        <div class="item" style="background: rgb(65, 18, 151);"></div>
+    </div>
+
+    <script src="../simba.js"></script>
+    <script>
+        let container = document.querySelector('.container')
+        let i = 0
+
+        let endTime = 0
+
+        let move = _.throttle(function (isDown) {
+            if (isDown) {
+                if (i === 4) return;
+                i++
+            } else {
+                if (i === 0) return;
+                i--
+            }
+            container.style.transform = `translateY(-${100 * i}vh)`
+        }, 1000)
+
+        //ff
+        window.addEventListener('DOMMouseScroll', function (e) {
+            move(e.detail > 0)
+        })
+
+        //chrome
+        window.onmousewheel = function (e) {
+            move(e.wheelDeltaY < 0)
+        }
+
+
+        // window.onmousewheel = function (e) {
+        //     if (new Date() - endTime < 1000) return;
+        //     if (e.wheelDeltaY < 0) {
+        //         if (i === 4) return;
+        //         i++
+        //     } else {
+        //         if (i === 0) return;
+        //         i--
+        //     }
+        //     container.style.transform = `translateY(-${100 * i}vh)`
+        //     endTime = new Date()
+        // }
+
+
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* div{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+        span{
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            display: block;
+        }
+        img{
+            width: 200px;
+            height: 200px;
+        }
+        input{
+            width: 200px;
+            height: 200px;
+        }
+        p.red{
+
+        } */
+        /* a:link{
+         color: red;
+     } */
+        /* a{
+         color: red;
+     } */
+        ul li:first-of-type {}
+
+        /* ul li:nth-of-type(2) */
+        ul li:not(:nth-of-type(3)) {}
+
+        /* input:checked+p{
+         display: none;
+     } */
+        /* li[title]{  */
+        /* 选择匹配具有属性title的元素 */
+        /* color: red;
+     } */
+        /* a[target]{
+        color: red;  
+     } */
+        /* a[target=_blank]{ */
+        /* 选择匹配具有属性target的元素，并且属性值为_blank */
+        /* color: red;
+     } */
+        /* li[class^=box]{ */
+        /* 选择匹配具有属性class属性的元素，并且属性值以Box开头 */
+        /* color: red; */
+        /* } */
+        /* li[class$=box]{ */
+        /* 选择匹配具有属性class属性的元素，并且属性值以Box结尾 */
+        /* color: red; */
+        /* } */
+        /* li[class*=box]{ */
+        /* 选择匹配具有属性class属性的元素，并且属性值包含了Box */
+        /* color: red; */
+        /* } */
+        /* body{ */
+        /* height: 1000px; */
+        /* } */
+        /* span{ */
+        /* display: block;
+         width: 150px;
+         height: 150px; */
+        /* background-attachment: fixed; */
+        /* 设置背景图的定位方式 */
+        /* background-image: url('https://avatar.csdnimg.cn/4/E/4/1_csdnedu_1594266891.jpg'); */
+        /* background-size: cover; */
+        /* background-size: 50px 50px; */
+        /* background-position: 25px 25px; */
+        /* background-repeat: no-repeat;
+        border: 1px solid rebeccapurple;
+        border-radius: 50px;
+        background-color: blue; */
+        /* background:red url("https://avatar.csdnimg.cn/4/E/4/1_csdnedu_1594266891.jpg") no-repeat fixed 100px 100px/50px 50px; */
+        /* 
+        第一个值 背景图的颜色
+                背景图的链接
+                背景图的重复方式
+                背景的定位方式
+                背景图的定位距离
+                背景图的尺寸
+         */
+        /* } */
+
+        table,
+        td {
+            border: 1px solid rebeccapurple;
+            border-collapse: collapse;
+        }
+
+        td {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+        }
+        textarea{
+            resize: none;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="http://www.baidu.com" method="GET">
+        <!-- <input type="text" name="username"> -->
+        <select size="" name="num">
+            <option value="one">我是。。。。</option>
+            <option value="two">我是。。。。</option>
+        </select>
+        <input type="submit">
+        <textarea name="" id="" cols="30" rows="10"></textarea>
+    </form>
+    <!-- <table> -->
+        <!-- <thead></thead>
+        <tbody></tbody>
+        <tfoot></tfoot> -->
+        <!-- <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+        </tr>
+    </table> -->
+    <!-- <div>
+
+    </div>
+    <span>
+
+    </span>
+    <img src="https://upload.jianshu.io/admin_banners/web_images/5000/73fb106b57565c1d79d1a4fb359d77d716aef438.jpg?imageMogr2/auto-orient/strip|imageView2/1/w/1250/h/540" alt="">
+    <p>qqq</p>
+    <h1>www</h1>
+    <input type="text">
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+    <span></span> -->
+
+    <!-- <a href="http://www.baidu.com">
+       <div>
+            5555
+       </div>
+    </a> -->
+    <!-- <p id="red" class="red">
+qwwww
+    </p>
+    <p>
+qqqq
+
+    </p>
+
+    <div>
+        <span></span>
+        <p>
+            <span></span>
+        </p>
+    </div>
+    <p></p>
+    <p></p>
+ -->
+
+    <!-- <div>
+        KW33!
+    </div> -->
+    <!-- <a href="#">kw33!</a> -->
+
+    <!-- <ul>
+        <li></li>
+        <li></li>
+        <li class="noselc"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul> -->
+
+    <!-- 
+        <input type="checkbox">
+        <p>第一个p标签</p> 
+    -->
+
+    <!-- <input type="radio"> -->
+
+    <!-- <ul>
+        <li title="大家好">11</li>
+        <li>22</li>
+        <li>33</li>
+        <li title="大家好">44</li>
+        <li>55</li>
+      
+    </ul> -->
+    <!-- <a href="#" target="_self">222</a>
+    <a href="#">222</a>
+    <a href="#">222</a>
+    <a href="#">222</a>
+    <a href="#" target="_self">222</a>
+    <a href="#" target="_blank">222</a>
+    <a href="#">222</a> -->
+
+    <!-- <ul>
+        <li class="1box">11</li>
+        <li class="2box">11</li>
+        <li class="3box">22</li>
+        <li class="111box3">33</li>
+        <li class="222box3">44</li>
+        <li>32</li>
+        <li>342</li>
+        <li>234</li>
+        <li>234</li>
+        <li>234</li>
+    </ul> -->
+    <span>
+
+    </span>
+</body>
+
+</html>

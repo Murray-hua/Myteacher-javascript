@@ -1,0 +1,50 @@
+* {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.j-s {
+    justify-content: space-between;
+}
+
+.j-s-a {
+    justify-content: space-around;
+}
+.j-c {
+    justify-content: center;
+}
+.a-c{
+    align-items: center;
+
+}
+.red {
+    border: 1px solid red;
+    box-sizing: border-box;
+}
+
+.size {
+    box-sizing: border-box;
+}
+
+.purple {
+    border: 1px solid purple;
+    box-sizing: border-box;
+}
+
+.relative {
+    position: relative;
+}
+
+.absolute {
+    position: absolute;
+}

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* span{
+            color: red;
+        } */
+
+        /* div 底下的span 都改变了样式 */
+        /* div span{
+            color: red;
+        } */
+
+        /* div p span{
+            color: red;
+        } */
+        /* p span{
+            color: red;
+        } */
+
+        /* 子带选择器 */
+
+        /* div>span{
+            color: red;
+        } */
+
+        div p{
+
+        }
+        div>p{
+
+        }
+    </style>
+</head>
+<body>
+    <!-- 当前需求是需要给div 底下的span -->
+    <div>
+        <span>我是div里面的span</span>
+        <p><span> 我是p里面的span</span></p>
+    </div>
+
+    <span>
+        我是外面的span
+    </span>
+    <p>
+        <span>我是p里面的span</span>
+    </p>
+</body>
+</html>

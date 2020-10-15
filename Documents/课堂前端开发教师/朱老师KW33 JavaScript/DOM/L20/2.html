@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../simba.css">
+    <link rel="stylesheet" href="https://www.bootcss.com/p/buttons/css/buttons.css">
+    <style>
+        #broadcast {
+            position: fixed;
+            left: 0;
+            top: 0;
+            right: 0;
+            bottom: 0;
+            background: rgb(10, 85, 115);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="broadcast" style=""></div>
+    <div style="position: relative;z-index: 999">
+        <div class="flex j-c" style="margin: 50px;">
+            <input type="text" id="city" value="南京">
+            <button id="btn">查询</button>
+        </div>
+        <ul id="list">
+    </div>
+
+    </ul>
+    <script src="./js/particles.js"></script>
+    <script>
+
+        window.onkeydown = e => {
+            if (e.keyCode === 123) {
+                e.preventDefault();
+                alert("请尊重")
+            }
+        }
+
+        let $ = {
+            get(url, success) {
+                //根据城市名称获取城市编号
+                let ajax1 = new XMLHttpRequest()
+                //打开通道，进行请求设置
+                ajax1.open('GET', 'http://service.envicloud.cn:8082' + url, true)
+                //发送请求
+                ajax1.send()
+                //监听状态，获取响应
+                ajax1.onreadystatechange = function () {
+                    if (ajax1.readyState === 4 && ajax1.status === 200) {
+                        let data = JSON.parse(ajax1.response)
+                        success(data)
+                    }
+                }
+            }
+        }
+
+        btn.onclick = function () {
+            list.innerHTML = ''
+            //根据城市名获取编号
+            $.get('/v2/citycode/YWNLMTYWMTAXOTYWNDQ4NQ==/' + city.value, function (data) {
+                //根据城市编号获取天气信息
+                $.get('/v2/weatherforecast/YWNLMTYWMTAXOTYWNDQ4NQ==/' + data.citycode, function (data) {
+                    data.forecast.forEach(r => {
+                        let li = document.createElement('li')
+                        li.innerHTML = `${r.date}--温度：${r.tmp.min}~${r.tmp.max}--${r.cond.cond_d}`
+                        list.appendChild(li)
+                    })
+                })
+            })
+        }
+
+        particlesJS('broadcast', {
+            particles: {
+                color: '#fff',
+                shape: 'circle', // "circle", "edge" or "triangle"
+                opacity: 1,
+                size: 4,
+                size_random: true,
+                nb: 50,
+                line_linked: {
+                    enable_auto: true,
+                    distance: 100,
+                    color: '#fff',
+                    opacity: 1,
+                    width: 1,
+                    condensed_mode: {
+                        enable: false,
+                        rotateX: 600,
+                        rotateY: 600
+                    }
+                },
+                anim: {
+                    enable: true,
+                    speed: 1
+                },
+
+            },
+            interactivity: {
+                enable: true,
+                mouse: {
+                    distance: 250
+                },
+                detect_on: 'canvas', // "canvas" or "window"
+                mode: 'grab',
+                line_linked: {
+                    opacity: .5
+                },
+                events: {
+                    // onclick: {
+                    //     enable: true,
+                    //     mode: 'push', // "push" or "remove" (particles)
+                    //     nb: 4
+                    // }
+                }
+            },
+            /* Retina Display Support */
+            retina_detect: true
+        });
+
+    </script>
+</body>
+
+</html>

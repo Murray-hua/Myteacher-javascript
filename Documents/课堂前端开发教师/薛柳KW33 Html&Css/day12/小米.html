@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../xl.css">
+    <style>
+        header {
+            height: 40px;
+            background-color: #999;
+        }
+
+        header .wrapper {
+            width: 1226px;
+            height: 100%;
+            background-color: blue;
+            margin: 0 auto;
+        }
+
+        header .wrapper ul {
+            width: 706px;
+            height: 100%;
+        }
+
+        header .head-shopcar {
+            width: 300px;
+            height: 100%;
+        }
+
+        header .wrapper ul li {
+            line-height: 40px;
+        }
+
+        header .wrapper ul li:not(:first-of-type)::before {
+            content: "|";
+            margin: 0px 5px;
+        }
+
+        .login {
+            width: 144px;
+            height: 100%;
+
+        }
+
+        .shop {
+            width: 120px;
+            height: 100%;
+        }
+
+        /* ------------------------------------------------------ */
+        /* 以上为头部样式 */
+
+        nav {
+            height: 100px;
+        }
+
+        .logo {
+            width: 55px;
+            height: 55px;
+        }
+
+        .login-bac {
+            width: 165px;
+            height: 100px;
+        }
+
+
+        nav .wrapper {
+            width: 1226px;
+            height: 100%;
+            background-color: blue;
+            margin: 0 auto;
+        }
+
+        nav .wrapper ul {
+            width: 706px;
+            height: 100%;
+        }
+
+        nav .head-shopcar {
+            width: 300px;
+            height: 100%;
+        }
+
+        nav .wrapper ul li {
+            line-height: 40px;
+        }
+
+        nav .search {
+            width: 295px;
+            height: 50px;
+        }
+        nav .search-input{
+            width: 242px;
+            height: 100%;
+        }
+        nav .search-img{
+            width: 50px;
+            height: 100%;
+        }
+        .banner{
+            height: 460px;
+        }
+        .banner .wrapper{
+            width: 1226px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .ad{
+            height: 170px;
+
+        }
+        .ad .wrapper{
+            width: 1226px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .ad-left{
+            width: 234px;
+            height: 100%;
+
+        }
+        .ad-rignt{
+            width: 978px;
+            height: 100%;
+
+        }
+        .ad-rignt li{
+            width: 316px;
+            height: 100%;
+        }
+        .time-container{
+            height: 400px;
+        }
+        .time-container .wrapper{
+            width: 1226px;
+            height: 100%;
+            margin: 0 auto;
+            flex-direction: column;
+        }
+        .time-container .time-title{
+            width: 100%;
+            height: 58px;
+        }
+        .time-container .time-main{
+            width: 100%;
+            flex: 1;
+        }
+        .time-title ul{
+            width: 70px;
+            height: 24px;
+        }
+        .time-title ul li{
+            width: 50%;
+            height: 100%;
+            text-align: center;
+        }
+        .time-title ul li:first-of-type{
+           border-right: none;
+        }
+        .time-main li{
+            width: 234px;
+            height: 100%;
+        }
+        .tel{
+            height: 614px;
+        }
+        .tel .wrapper{
+            width: 1226px;
+            height: 100%;
+            margin: 0 auto;
+        }
+        .tel-img{
+            width: 234px;
+            height: 100%;
+        }
+        .tel ul{
+            width: 978px;
+            height: 100%;
+        }
+        .tel ul li{
+            flex-direction: column;
+        }
+        .tel ul li div{
+            height: 300px;
+        }
+    </style>
+
+</head>
+
+<body>
+    <header>
+        <div class="wrapper flex j-s">
+            <ul class="red  flex ">
+                <li>小米商城</li>
+                <li>小米</li>
+                <li>商城</li>
+                <li>小米商城</li>
+                <li>小米商城</li>
+                <li>小米</li>
+                <li>商城</li>
+                <li>小米商城</li>
+            </ul>
+            <div class="head-shopcar red  flex j-s">
+                <div class="login red ">
+
+                </div>
+                <div class="shop red ">
+
+                </div>
+            </div>
+        </div>
+    </header>
+    <nav class="purple ">
+        <div class="wrapper flex j-s a-c">
+            <div class="logo red">
+
+            </div>
+            <div class="login-bac red">
+
+            </div>
+            <ul class="red">
+
+            </ul>
+            <div class="search red flex">
+                <div class="search-input red"></div>
+                <div class="search-img red"></div>
+            </div>
+        </div>
+    </nav>
+    <div class="banner red">
+        <div class="wrapper red"></div>
+
+    </div>
+    <div class="ad red">
+        <div class="wrapper red flex j-s">
+            <div class="ad-left purple">
+
+            </div>
+            <ul class="ad-rignt purple flex j-s">
+                <li class="red"></li>
+                <li class="red"></li>
+                <li class="red"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="time-container purple">
+        <div class="wrapper red flex">
+            <div class="time-title purple flex j-s a-c">
+                <h2>小米闪购</h2>
+                <ul class="flex">
+                    <li class="purple">左</li>
+                    <li class="purple">右</li>
+                </ul>
+            </div>
+            <ul class="time-main purple flex j-s">
+                <li class="purple"></li>
+                <li class="purple"></li>
+                <li class="purple"></li>
+                <li class="purple"></li>
+                <li class="purple"></li>
+            </ul>
+        </div>
+
+    </div>
+    <div class="tel purple">
+        <div class="wrapper purple flex j-s">
+            <div class="tel-img red">
+
+            </div>
+            <ul class="red flex j-s">
+                <li class="tel-img red flex j-s">
+                    <div class="purple"></div>
+                    <div class="purple"></div>
+                </li>
+                <li class="tel-img red flex j-s">
+                    <div class="purple"></div>
+                    <div class="purple"></div>
+                </li>
+                <li class="tel-img red flex j-s">
+                    <div class="purple"></div>
+                    <div class="purple"></div>
+                </li>
+                <li class="tel-img red flex j-s">
+                    <div class="purple"></div>
+                    <div class="purple"></div>
+                </li>
+              
+            </ul>
+        </div>
+
+    </div>
+</body>
+
+</html>

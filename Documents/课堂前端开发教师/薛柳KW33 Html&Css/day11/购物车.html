@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .shop{
+            width: 120px;
+            height: 40px;
+            background-color: #999;
+            color: #eee;
+            text-align: center;
+            line-height: 40px;
+
+        }
+        .car{
+            height: 0px;
+            width: 316px;
+            background-color: #fff;
+            box-shadow: 0px 5px 5px #aaa;
+            text-align: center;
+            line-height: 100px;
+            overflow: hidden;
+            transition: height 1s;
+        }
+
+        .shop:hover+.car{
+            height: 100px;
+        }
+        .shop:hover{
+            background-color: #fff;
+            color: orangered;
+        }
+    </style>
+</head>
+<body>
+    <div class="shop">
+        购物车(0)
+    </div>
+    <div class="car">
+        购物车中还没有商品，赶紧选购吧！
+    </div>
+</body>
+</html>

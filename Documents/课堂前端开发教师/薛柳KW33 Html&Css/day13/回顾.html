@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../xl.css">
+    <style>
+        ul {
+            width: 200px;
+            /* margin: 100px auto; */
+            position: absolute;
+        }
+
+        li {
+            width: 200px;
+            height: 200px;
+            position: absolute;
+            /* background-color: red; */
+        }
+
+        li:nth-of-type(1) {
+            border-radius: 54% 30% 20% 10%/13% 50% 89% 102%;
+            transform: rotate(30deg);
+            animation: xz 5s linear infinite;
+        }
+
+        li:nth-of-type(2) {
+            border-radius: 24% 70% 20% 80%/13% 10% 39% 22%;
+            transform: rotate(60deg);
+            animation: fxz 8s linear infinite;
+        }
+
+        li:nth-of-type(3) {
+            border-radius: 54% 24% 20% 10%/13% 50% 24% 102%;
+            transform: rotate(45deg);
+            animation: xz 10s linear infinite;
+        }
+
+        @keyframes xz {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+        @keyframes fxz {
+            0% {
+                transform: rotate(360deg);
+            }
+
+            100% {
+                transform: rotate(0deg);
+            }
+        }
+
+        div{
+            position: relative;
+            left: 200px;
+            top: 100px;
+            width: 200px;
+            height: 200px;
+        }
+        p{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            font-size: 12px;
+            color: #fff;
+        }
+        .red{
+           border: 1px solid #fff;
+        }
+        ul:hover li{
+            background-color: rgba(0, 0, 255, .8);
+            border: none;
+            /* border: 1px solid rebeccapurple; */
+        }
+        .btn{
+            width: 100px;
+            height: 30px;
+            border: 1px solid #fff;
+            background-color: #fff;
+            color: #000;
+            border-radius:54% 24% 20% 10%/13% 50% 24% 102%; 
+        }
+    </style>
+</head>
+
+<body style="background-color: #000;">
+    <!-- 动画 -->
+    <div>
+        <ul>
+            <li class="red"></li>
+            <li class="red"></li>
+            <li class="red"></li>
+        </ul>
+        <p>
+            Hello 
+            <span class="btn">
+                KW33！
+            </span>
+        </p>
+    </div>
+   
+
+</body>
+
+</html>

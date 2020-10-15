@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .login-container {
+            /* width: 100%;  div 标签是块级标签，默认百分百宽度 可以不用设置*/
+            height: 304px;
+            background-color: #edf4ed;
+            background-image: url('./images/bac.jpg');
+            background-size: contain;
+            /* background-size: cover; */
+            background-repeat: no-repeat;
+            background-position: -20px 0px;
+        }
+
+        .login-wrapper {
+            width: 950px;
+            height: 100%;
+            /* border: 1px solid red; */
+            /* background-color: red; */
+            margin: 0 auto;
+        }
+
+        .login-right {
+            width: 300px;
+            height: 300px;
+            /* background-color: chartreuse; */
+            float: right;
+            margin-top: 2px;
+            /* border: 1px solid red; */
+            padding: 30px 10px 10px;
+            box-sizing: border-box;
+            position: relative;
+        }
+
+        .login-left {
+            width: 150px;
+            height: 120px;
+            /* background-color: chartreuse; */
+            float: right;
+            margin-right: 20px;
+            margin-top: calc((304px - 120px)/2);
+            /* border: 1px solid red; */
+        }
+
+        .login-nav {
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+
+        .login-nav li {
+            border-bottom: 1px solid rebeccapurple;
+            float: left;
+            width: 50%;
+            height: 28px;
+            box-sizing: border-box;
+            text-align: center;
+            font-size: 13px;
+            line-height: 28px;
+            cursor: pointer;
+        }
+
+        .login-nav li:first-of-type {
+            color: #333;
+            font-weight: 600;
+            border-bottom: 1px solid #494949;
+        }
+
+        .login-nav li:last-of-type {
+            color: #9b9b9b;
+            /* font-weight: 600; */
+            border-bottom: 1px solid #ececec;
+        }
+
+        .xieyi {
+            margin-bottom: 10px;
+            font-size: 12px;
+            color: #9b9b9b;
+        }
+
+        .xieyi a {
+            color: #41ac52;
+        }
+
+        .login-tel {
+            height: 34px;
+            border: 1px solid #e4e6e5;
+            margin-bottom: 10px;
+            background-color: #fff;
+            border-radius: 3px;
+        }
+
+        .tel86 {
+            width: 50px;
+            line-height: 36px;
+            font-size: 15px;
+            font-weight: 700;
+            text-align: center;
+            position: relative;
+            float: left;
+        }
+
+        .tel86::after {
+            content: "";
+            width: 0;
+            border-right: 1px solid rgba(0, 0, 0, .12);
+            position: absolute;
+            height: 80%;
+            top: 10%;
+            right: 0;
+        }
+
+        .tel-input {
+            float: left;
+            /* border: none; */
+        }
+
+        .tel-input input {
+            border: none;
+            outline: none;
+            padding-left: 10px;
+            height: 32px;
+            margin-top: 1px;
+        }
+
+        .get-code {
+            color: #41ac52;
+            line-height: 35px;
+            font-size: 13px;
+            float: right;
+            padding: 0 10px;
+        }
+
+        .login-btn {
+            height: 34px;
+            background-color: rgba(66, 189, 86, .5);
+            line-height: 34px;
+            text-align: center;
+            color: #fff;
+            border-radius: 3px;
+        }
+
+        .check-auto label,
+        .no-code {
+            user-select: none;
+
+            /* 文本不能被选择 */
+            font-size: 13px;
+        }
+
+        .check-auto {
+            float: left;
+
+        }
+
+        .no-code {
+            float: right;
+            color: #41ac52;
+        }
+
+        .login-check {
+            height: 40px;
+            padding-top: 10px;
+            box-sizing: border-box;
+        }
+
+        .other {
+            width: 250px;
+            height: 34px;
+            border-top: 1px solid #ddd;
+            padding-top: 6px;
+            box-sizing: border-box;
+
+        }
+
+        .other p {
+            color: #9b9b9b;
+            font-size: 11px;
+            line-height: 22px;
+        }
+
+        .other div {
+            width: 22px;
+            height: 22px;
+            /* border: 1px solid rebeccapurple; */
+            margin-left: 12px;
+        }
+
+        .wx {
+            background-image: url('./images/下载.svg');
+            background-size: contain;
+        }
+
+        .wb {
+            background-image: url('./images/下载\ \(1\).svg');
+            background-size: contain;
+
+        }
+
+        .other p,
+        .other div {
+            float: left;
+        }
+
+        /* 快速格式化 alt+shift+f */
+        .erweima {
+            width: 30px;
+            height: 30px;
+            /* border: 1px solid rebeccapurple; */
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-image: url('./images/erweima.png');
+            background-size: contain;
+
+        }
+
+        .douban-banben {
+            margin: 7px 0;
+            font-size: 25px;
+            color: #111;
+            line-height: 24px;
+        }
+        .bottom-download{
+            margin-top: 18px;
+
+        }
+        .download-app{
+            width: 115px;
+            height: 30px;
+            background-color: #00B51D;
+            color: #ffff;
+            line-height: 30px;
+            text-align: center;
+            font-size: 12px;
+            border-radius: 2px;
+            float: left;
+        }
+        .download-erweima{
+            width: 30px;
+            height: 30px;
+            border: 1px solid #48aa0d;
+            float: right;
+            box-sizing: border-box;
+            border-radius: 2px;
+            position: relative;
+        }
+        .download-erweima:hover .erweima-hover{
+            display: block;
+        }
+        .download-erweima>img{
+            width: 28px;
+            height: 28px;
+            
+        }
+        .erweima-hover{
+            width: 200px;
+            height: 226px;
+            /* border: 1px solid rebeccapurple;  */
+            position: absolute;
+            top: -1px;
+            left: -1px;
+            border-radius: 2px;
+            padding: 20px 20px 5px;
+            box-sizing: border-box;
+            background-color: #fff;
+            display: none;
+        }
+        .erweima-hover img{
+            width: 160px;
+            height: 160px;
+        }
+        .erweima-hover p{
+           font-size: 12px;
+           color: #666;
+           margin: 13px 0;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="login-container">
+        <div class="login-wrapper">
+            <div class="login-right">
+                <div class="erweima"></div>
+                <ul class="login-nav">
+                    <li>短信登录/注册</li>
+                    <li>密码登录</li>
+                </ul>
+                <p class="xieyi">
+                    请仔细阅读<a href="#">豆瓣使用协议、隐私政策</a>
+                </p>
+                <div class="login-tel">
+                    <div class="tel86">
+                        +86
+                    </div>
+                    <div class="tel-input">
+                        <input type="text" placeholder="手机号">
+                    </div>
+                </div>
+                <div class="login-tel">
+                    <div class="tel-input">
+                        <input type="text" placeholder="验证码">
+                    </div>
+                    <div class="get-code">
+                        获取验证码
+                    </div>
+                </div>
+
+                <div class="login-btn">
+                    登录豆瓣
+                </div>
+                <div class="login-check">
+                    <div class="check-auto">
+                        <input type="checkbox" id="check">
+                        <label for="check">下次自动登录</label>
+                    </div>
+                    <div class="no-code">
+                        收不到验证码
+                    </div>
+                </div>
+                <div class="other">
+                    <p>第三方登录:</p>
+                    <div class="wx"></div>
+                    <div class="wb"></div>
+                </div>
+            </div>
+            <div class="login-left">
+                <p class="douban-banben">
+                    豆瓣&nbsp;6.0
+                </p>
+                <div class="bottom-download">
+                    <div class="download-app">
+                        下载豆瓣 App
+                    </div>
+                    <div class="download-erweima">
+                        <img src="./images/icon_qrcode_green.png" alt="" >
+                        <div class="erweima-hover">
+                            <img src="./images/doubanapp_qrcode.png" alt="">
+                            <p>iOS / Android 扫码直接下载</p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

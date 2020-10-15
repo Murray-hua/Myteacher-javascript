@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        // let a = 10
+
+        // //异步操作。等待主流程执行完再执行
+        // setTimeout(() => {
+        //     console.log(333);
+        //     a = 20
+        // }, 0);
+
+        // console.log(a);
+
+        let $ = {
+            get(url, success) {
+                //根据城市名称获取城市编号
+                let ajax1 = new XMLHttpRequest()
+                //打开通道，进行请求设置
+                ajax1.open('GET', url, true)
+                //发送请求
+                ajax1.send()
+                //监听状态，获取响应
+                ajax1.onreadystatechange = function () {
+                    if (ajax1.readyState === 4 && ajax1.status === 200) {
+                        let data = JSON.parse(ajax1.response)
+                        success(data)
+                    }
+                }
+            }
+        }
+
+        // let arr = []
+
+        $.get('./data.json', data => {
+            // arr = data
+            console.log(data);
+        })
+
+        // console.log(arr);
+
+
+        for (var i = 0; i < 5; i++) {
+            //等主流程空闲才会走
+            setTimeout(() => {
+                console.log(i);
+            }, 0);
+        }
+
+        console.log('--------------');
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            /* 使表格线重合成一条线 */
+            border-collapse: collapse;
+            width: 300px;
+            /* height: 200px; */
+        }
+        thead tr{
+            background-color: #eee;
+            height: 50px;
+        }
+        tbody tr{
+            height: 50px;
+        }
+
+        td{
+            text-align: center;
+        }
+        
+        tbody tr:hover{
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+    <!-- 表格 -->
+    <!-- 合并单元格 colspan  rowspan -->
+    <table border="1">
+        <thead>
+            <tr>  
+                <td>学号</td>
+                <td>姓名</td>
+                <td>性别</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td>1</td>
+                <td>zs</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td rowspan="2">2</td>
+                <td>ls</td>
+                <td>男</td>
+            </tr>
+            <tr>  
+                <td colspan="2">ww</td>
+            </tr>
+        </tbody>
+        <!-- <tfoot>
+
+        </tfoot> -->
+        <!--  -->
+    </table>
+</body>
+</html>

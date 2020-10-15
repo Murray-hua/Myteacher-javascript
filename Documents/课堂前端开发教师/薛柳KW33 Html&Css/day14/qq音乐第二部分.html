@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../xl.css">
+    <style>
+        .container{
+            /* margin: 200px; */
+            width: 1500px;
+            height: 900px;
+            position: relative;
+            overflow: hidden;
+            background-color: #000;
+        }
+        .wrapper{
+            width: 1920px;
+            height: 1069px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%,-50%);
+        }
+        ul{
+            padding-left: 100px;
+            /* justify-content: flex-start;
+            align-items: flex-start; */
+        }
+        ul li{
+            width: 211px;
+            height: 211px;
+            /* border: 1px solid royalblue; */
+            background-image: url('./images/sprite2.jpg');
+            float: left;
+        }
+        li.cyx{
+            background-image: url('./images/singer12.jpg');
+            animation: cyx 3s;
+        }
+        @keyframes cyx {
+            0%{
+                transform: scale(1.5);
+                opacity: .2;
+            }
+            100%{
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <ul class="wrapper purple ">
+           <li style="background-position: 0 -424px;"></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li class="cyx"></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+           <li></li>
+        </ul>
+    </div>
+</body>
+</html>

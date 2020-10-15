@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <link rel="stylesheet" href="../通用样式.css"> -->
+    <style>
+
+        /* #box11{
+            color:blue
+        } */
+
+        .container div{ 
+            color: red;
+        }
+
+        .box{  
+            color: pink;
+        }
+        /* div{  
+            color: seagreen !important;
+        } */
+    </style>
+   
+</head>
+<body>
+    <!-- 
+        选择器权重
+        *{} 权重值为 0
+        标签选择器 权重值为 1
+        类选择器 权重值 为10
+        id选择器 权重值为100
+        行内选择器权重 值 为1000
+        ！important 权重值最大
+     -->
+    <div class="container">
+        <div class="box" id="box11" style="color: pink;">
+            我是div标签
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 选择第一个 :first-of-type */
+        /* div p:first-of-type{
+         color: aqua;   
+        } */
+
+        /* 选择最后1个 :last-of-type */
+        /* div p:last-of-type{
+         color: red;   
+        } */
+
+        /* 选择第n个 :nth-of-type(n) */
+        /* div p:nth-of-type(4){
+            color: purple;
+        } */
+
+        /* 方法1： */
+        /* .d2 p:nth-of-type(3){
+            color: red;
+        } */
+
+        /* 方法2： */
+        /* div:last-of-type p:nth-of-type(3){
+            color: red;
+        } */
+    </style>
+</head>
+<body>
+    <div class="d1">
+        <p>我是第1个p标签</p>
+        <p>我是第2个p标签</p>
+        <p>我是第3个p标签</p>
+        <p>我是第4个p标签</p>
+        <p>我是第5个p标签</p>
+    </div>
+    <div class="d2">
+        <p>我是第11个p标签</p>
+        <p>我是第22个p标签</p>
+        <p>我是第33个p标签</p>
+        <p>我是第44个p标签</p>
+        <p>我是第55个p标签</p>
+    </div>
+</body>
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div>账号 <input type="text" id="nickname"></div>
+    <div>
+        密码<input type="text" id="password">
+    </div>
+    <div>
+        记住账号<input type="checkbox" id="rem">
+    </div>
+    <button id="login">登录</button>
+    <script>
+
+        login.onclick = function () {
+            console.log();
+            if (password.value === '123123') {
+                alert("登录成功")
+                if (rem.checked) {
+                    let now = new Date()
+                    now.setDate(now.getDate() + 7)
+                    document.cookie = 'nickname=' + nickname.value + ';expires=' + now.toUTCString()
+                } else {
+                    document.cookie = 'nickname=' + nickname.value
+                }
+                location.href = '6.html'
+            } else {
+                alert("登录失败")
+            }
+        }
+
+
+
+
+
+    </script>
+</body>
+
+</html>

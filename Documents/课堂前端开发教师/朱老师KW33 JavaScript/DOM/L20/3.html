@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            margin: 0;
+            overflow: hidden;
+            width: 100vw;
+            height: 100vh;
+            background-image: url("https://res.cloudinary.com/dtvy1jqj0/image/upload/v1600261540/misc/bg0.jpg");
+            background-size: cover;
+            backdrop-filter: brightness(50%);
+        }
+
+        canvas {
+            display: block;
+        }
+
+        #canvas_container {
+            width: 100%;
+            height: 100vh;
+        }
+
+        button {
+            position: absolute;
+            bottom: 5%;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 1px solid white;
+            border-radius: 5px;
+            font-size: 0.9rem;
+            padding: 0.5rem 0.9em;
+            background: #000000;
+            color: white;
+            -webkit-font-smoothing: antialiased;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all .3s;
+        }
+
+        button:hover {
+            background: #ffffff;
+            color: #000000;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="canvas_container">
+    </div>
+    <button id="fullscr">全屏演示</button>
+    <script src="https://www.17sucai.com/preview/1424582/2020-09-25/space/js/three.min.js"></script>
+    <script src="https://www.17sucai.com/preview/1424582/2020-09-25/space/js/OrbitControls.js"></script>
+    <script src="https://www.17sucai.com/preview/1424582/2020-09-25/space/js/simplex-noise.min.js"></script>
+    <script src="https://www.17sucai.com/preview/1424582/2020-09-25/space/js/script.js"></script>
+</body>
+
+</html>

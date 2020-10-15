@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+
+        .box2 {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+            position: absolute;
+            /* left: 0px;
+            top: 0px; */
+            /* top: 200px; 
+             left: 200px; */
+        }
+
+        .box3 {
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            position: absolute;
+            top: 20px;
+            left: 20px;
+        }
+
+
+        .box4 {
+            width: 300px;
+            height: 300px;
+            background-color: pink;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+
+        .box5 {
+            width: 500px;
+            height: 600px;
+            background-color: skyblue;
+            position: relative;
+            top: 100px;
+            left: 100px;
+        }
+    </style>
+</head>
+
+<!-- 绝对定位 absolute  相对于 最近的已经定位的祖先元素进行定位，
+    如果所有的祖先元素都没有定位的话，就相对于浏览器进行定位 
+    设置了绝对定位的元素脱离文档流
+-->
+
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+
+    <div class="box5">
+
+        <div class="box4">
+
+            <div class="box3"></div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

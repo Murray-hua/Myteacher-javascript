@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script src="./simba.js"></script>
+    <script>
+
+        // let str = '111'
+        // console.log(str.__proto__.constructor); //找到一个对象的构造函数
+
+        // //给字符串类型的对象，扩展了翻转方法
+        // String.prototype.reverse = function () {
+        //     return this.split('').reverse().join('')
+        // }
+
+        //类的prototype === 该类的实例的__proto__
+        // console.__proto__.line = function () {
+        //     this.log('-'.repeat(30))
+        // }
+
+        // console.line();
+
+        let str = 'hello'
+        console.log(str.reverse());
+        console.log(new Date().getChinaText());
+
+    </script>
+</body>
+
+</html>

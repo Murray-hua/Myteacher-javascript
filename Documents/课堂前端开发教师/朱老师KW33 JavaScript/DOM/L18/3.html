@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .line.active {
+            color: red;
+        }
+    </style>
+</head>
+
+<body style="text-align: center;">
+    <span id="currentTime">00:00</span> /
+
+    <div class="container"></div>
+    <script src="../simba.js"></script>
+    <script>
+
+        let container = document.querySelector('.container')
+        let currentTime = document.querySelector('#currentTime')
+
+        let text = `
+        [00:00]第一行
+        [00:05]第二行
+        [00:10]第三行
+        [00:18]第四行
+        [00:23]第五行第一行第一行第一行第一行第一行
+        `
+
+        let res = text.trim().split('[').filter(r => r.trim()).map(r => r.trim()).map(r => r.split(']'))
+
+        res.forEach(r => {
+            let line = document.createElement('div')
+            line.classList.add('line')
+            line.setAttribute('time', r[0])
+            line.innerHTML = r[1]
+            container.appendChild(line)
+        })
+        let lines = document.querySelectorAll('.line')
+
+        console.log();
+
+        let s = 0
+        setInterval(() => {
+            s++
+            let { m: m1, s: s1 } = _.getHMSFromMS(s * 1000)
+            let str = `${m1}:${s1}`
+            currentTime.innerHTML = str
+
+            lines.forEach(r => {
+                console.log(r.getAttribute('time'),str);
+                if (r.getAttribute('time') === str)
+                    r.classList.add('active')
+            })
+
+        }, 1000);
+
+
+
+
+    </script>
+</body>
+
+</html>

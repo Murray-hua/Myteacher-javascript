@@ -1,0 +1,16 @@
+{
+  "id": "2013580",
+  "name": "8.18",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "5982855",
+      "name": "插头",
+      "font_class": "chatou",
+      "unicode": "ec77",
+      "unicode_decimal": 60535
+    }
+  ]
+}

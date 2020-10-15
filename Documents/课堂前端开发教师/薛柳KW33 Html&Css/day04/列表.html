@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* ul{ */
+            /* 去掉ul 的样式 list-style 去除列表的样式 */
+            /* list-style: none;
+        } */
+
+        /* 选择包含类名为outer 的ul 标签 底下的li*/
+        /* ul#outer>li{
+            background-image: url(./image/太阳.png);
+            background-size: 10px auto;
+            background-repeat: no-repeat;
+            text-indent: 10px;
+            background-position: 0px 5px;
+        } */
+
+        /* 选择包含类名为inner 的ul 标签 */
+        /* ul.inner{
+            background-color: crimson;
+        } */
+
+
+        /* -------------------------------------- */
+
+        ol,ul{
+            /* list-style 去除列表的样式 */
+            list-style: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 
+        3种列表  所有的标签都是块级标签  每一个列表都是可以互相嵌套的
+        1：无序列表  ul --有type 属性，可以改变前面的点的样式，不赞成使用。 li 
+        (一般情况下用背景图代替ul 前面的样式)   
+        ul  和 li 可以互相嵌套
+
+        2：有序列表 ol li
+
+        3: 自定义列表
+     -->
+
+    <!-- <ul type="circle"> -->
+        <!-- <ul id="outer">
+            <li>
+                苹果
+                <ul class="inner">
+                    <li>红富士</li>
+                    <li>阿克苏</li>
+                </ul>
+            </li>
+            <li>香蕉</li>
+            <li>西瓜</li>
+        </ul> -->
+
+
+        <!-- type值1AaIi -->
+        <!-- <ol type="i">
+            <li>ysl</li>
+            <li>mac
+                <ul>
+                    <li>小辣椒</li>
+                    <li>紫罗兰</li>
+                    <li>芭比粉</li>
+                </ul>
+            </li>
+            <li>SKII
+                <ol>
+                    <li>神仙水</li>
+                    <li>眼影</li>
+                    <li>高光</li>
+                    <li>散粉</li>
+                </ol>
+            </li>
+            <li>兰蔻</li>
+        </ol> -->
+
+        <!-- 自定义列表 dl申明自定义列表   dt列表标题   dd 列表的描述  -->
+        <!-- <dl>
+            <dt>斗地主</dt>
+            <dd>给阿姨来一杯卡布奇诺</dd>
+            <dt>消消乐</dt>
+            <dd>perfect!</dd>
+            <dt>HTML</dt>
+            <dd>超文本标记语言!
+                <ul>
+                    <li>div标签</li>
+                    <li>span标签</li>
+                    <li>img标签</li>
+                </ul>
+            </dd>
+        </dl> -->
+</body>
+
+</html>
